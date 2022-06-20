@@ -1,6 +1,8 @@
-package projectfinance.model;
+package personalfinance.model;
 
 public abstract class Common {
+
+    public Common() {}
 
     public String getValueForComboBox() {
         return null;

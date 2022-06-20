@@ -1,4 +1,4 @@
-package projectfinance.settings;
+package personalfinance.settings;
 
 import java.util.HashMap;
 

@@ -1,6 +1,6 @@
-package projectfinance;
+package personalfinance;
 
-import projectfinance.settings.Text;
+import personalfinance.settings.Text;
 
 import java.awt.*;
 import java.io.File;
