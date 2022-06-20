@@ -5,13 +5,13 @@ import projectfinance.settings.Text;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class ProjectFinance {
     public static void main(String[] args) {
         init();
-        System.out.println(Text.get("PROGRAM_NAME"));
-        System.out.println(Arrays.toString(Text.getMonths()));
+        //System.out.println(Text.get("PROGRAM_NAME"));
+        //System.out.println(Arrays.toString(Text.getMonths()));
     }
 
     private static void init() {
