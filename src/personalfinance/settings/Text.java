@@ -24,8 +24,13 @@ public class Text {
     public static final String ERROR_AMOUNT_FORMAT = "ERROR_AMOUNT_FORMAT";
     public static final String ERROR_NO_BASE_CURRENCY = "ERROR_NO_BASE_CURRENCY";
 
+    public static final String YES = "YES";
+    public static final String NO = "NO";
+
     public static String get(String key) {
-        return data.get(key);
+        if (data.containsKey(key)) return data.get(key);
+        System.out.println("Такога ключа ў Text ня йснуе!");
+        return "";
     }
 
     public static String[] getMonths() {
@@ -77,5 +82,8 @@ public class Text {
         data.put(ERROR_NO_BASE_CURRENCY, "Неабходная базавая валюта!" +
                 " Устанавіце спачатку гэты парамэтр у іншай валюце, " +
                 "потым ён здымецца аўтаматычна.");
+
+        data.put(YES, "Так");
+        data.put(NO, "Не");
     }
 }

@@ -17,9 +17,9 @@ public final class Settings {
 
     public static final String AMOUNT_FORMAT = "%.2f";
     public static final String RATE_FORMAT = "%.4f";
-    public static final String DATE_FORMAT = "dd.MM.yyyy";
-    public static final String DATE_MONTH_FORMAT = "MMMM yyyy";
-    public static final String YEAR_FORMAT = "yyyy";
+    public static final String FULL_DATE_FORMAT = "dd.MM.yyyy";
+    public static final String MONTH_YEAR_FORMAT = "MMMM yyyy";
+    public static final String YEAR_ONLY_FORMAT = "yyyy";
 
     public static final int OVERVIEW_ROWS_COUNT = 10;
 
@@ -42,10 +42,6 @@ public final class Settings {
         }
     }
 
-    private static void setLocale() {
-        Locale.setDefault(new Locale("by"));
-    }
-
     public static File getSaveFile() {
         return SAVE_FILE;
     }
@@ -63,5 +59,13 @@ public final class Settings {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static String getLocale() {
+        return String.valueOf(Locale.getDefault());
+    }
+
+    private static void setLocale() {
+        Locale.setDefault(new Locale("be"));
     }
 }
