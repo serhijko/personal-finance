@@ -61,7 +61,7 @@ public final class Format {
     private static String dateFormat(String dateFormat, Date date) {
         String locale = Settings.getLocale();
         SimpleDateFormat sdf;
-        if (locale.equals("be")) {
+        if (locale.equals("be") || locale.equals("ru") || locale.equals("uk") || locale.equals("fr")) {
             sdf = new SimpleDateFormat(dateFormat, new MainDateFormatSymbols());
         } else {
             sdf = new SimpleDateFormat(dateFormat);
@@ -73,7 +73,16 @@ public final class Format {
 
         @Override
         public String[] getMonths() {
-            return Text.getMonths();
+            System.out.println(Settings.getLocale());
+            if (Settings.getLocale().equals("fr")) {
+                String[] months = DateFormatSymbols.getInstance().getMonths();
+                for (int i = 0; i <= 11; i++) {
+                    months[i] = months[i].substring(0, 1).toUpperCase() + months[i].substring(1);
+                }
+                return months;
+            } else {
+                return Text.getMonths();
+            }
         }
     }
 }
