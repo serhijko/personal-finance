@@ -53,10 +53,6 @@ public final class Text {
     public static void init() {
         if (Settings.getLocale().equals("be")) {
             PROGRAM_NAME = "Хатняя бухгальтэрыя";
-            MENU_FILE = "Файл";
-            MENU_EDIT = "Праўка";
-            MENU_VIEW = "Выгляд";
-            MENU_HELP = "Даведка";
 
             data.put("JAN", "Студзень");
             data.put("FEB", "Люты");
@@ -76,7 +72,7 @@ public final class Text {
             ERROR_DATE_FORMAT = "Некарэктны фармат даты!";
             ERROR_CODE_EMPTY = "Вы не ўказалі код!";
             ERROR_CURRENCY_EMPTY = "Вы ня выбралі валюту!";
-            ERROR_ARTICLE_EMPTY = "ВЫ ня выбралі артыкул!";
+            ERROR_ARTICLE_EMPTY = "Вы ня выбралі артыкул!";
             ERROR_ACCOUNT_EMPTY = "Вы ня выбралі рахунак!";
             ERROR_RATE_INCORRECT = "Некарэктнае значэньне курсу!";
             ERROR_AMOUNT_FORMAT = "Некарэктны фармат сумы!";
@@ -86,6 +82,11 @@ public final class Text {
 
             YES = "Так";
             NO = "Не";
+
+            MENU_FILE = "Файл";
+            MENU_EDIT = "Праўка";
+            MENU_VIEW = "Выгляд";
+            MENU_HELP = "Даведка";
         } else if (Settings.getLocale().equals("ru")) {
             PROGRAM_NAME = "Домашняя бухгалтерия";
 
@@ -138,32 +139,68 @@ public final class Text {
             data.put("NOV", "Листопад");
             data.put("DEC", "Грудень");
 
-            ERROR_TITLE_EMPTY = "Вы не запровадили назву!";
+            ERROR_TITLE_EMPTY = "Ви не запровадили назву!";
             ERROR_IS_EXISTS = "Такий запис уже існує!";
             ERROR_DATE_FORMAT = "Неправильний формат дати!";
-            ERROR_CODE_EMPTY = "Вы не вказали код!";
-            ERROR_CURRENCY_EMPTY = "Вы не вибрали валюту!";
-            ERROR_ARTICLE_EMPTY = "Вы не обрали статтю!";
-            ERROR_ACCOUNT_EMPTY = "Вы не обрали рахунок!";
+            ERROR_CODE_EMPTY = "Ви не вказали код!";
+            ERROR_CURRENCY_EMPTY = "Ви не вибрали валюту!";
+            ERROR_ARTICLE_EMPTY = "Ви не обрали статтю!";
+            ERROR_ACCOUNT_EMPTY = "Ви не обрали рахунок!";
             ERROR_RATE_INCORRECT = "Некоректне значения курсу!";
             ERROR_AMOUNT_FORMAT = "Некоректний формат суми!";
             ERROR_NO_BASE_CURRENCY = "Необхідна базова валюта!" +
                     " Спочатку встановіть цей параметр в іншій валюті, " +
                     "потім він буде автоматично видалений у цій валюті.";
 
-            YES = "Да";
-            NO = "Нет";
+            YES = "Так";
+            NO = "Ні";
 
             MENU_FILE = "Файл";
-            MENU_EDIT = "Правка";
-            MENU_VIEW = "Вид";
-            MENU_HELP = "Помощь";
+            MENU_EDIT = "Редагування";
+            MENU_VIEW = "Вигляд";
+            MENU_HELP = "Довідка";
+        } else if (Settings.getLocale().equals("pl")) {
+                PROGRAM_NAME = "Rachunkowość (księgowość) domowa";
+
+                data.put("JAN", "Styczeń");
+                data.put("FEB", "Luty");
+                data.put("MAR", "Marzec");
+                data.put("APR", "Kwiecień");
+                data.put("MAY", "Maj");
+                data.put("JUN", "Czerwiec");
+                data.put("JUL", "Lipiec");
+                data.put("AUG", "Sierpień");
+                data.put("SEP", "Wrzesień");
+                data.put("OCT", "Październik");
+                data.put("NOV", "Listopad");
+                data.put("DEC", "Grudzień");
+
+                ERROR_TITLE_EMPTY = "Nie wpisałeś nazwy!";
+                ERROR_IS_EXISTS = "Taki rekord już istnieje!";
+                ERROR_DATE_FORMAT = "Zły format daty";
+                ERROR_CODE_EMPTY = "Nie podałeś kodu!";
+                ERROR_CURRENCY_EMPTY = "Nie wybrałeś waluty!";
+                ERROR_ARTICLE_EMPTY = "Nie wybrałeś artykułu!";
+                ERROR_ACCOUNT_EMPTY = "Nie wybrałeś konta";
+                ERROR_RATE_INCORRECT = "Nieprawidłowa wartość kursu!";
+                ERROR_AMOUNT_FORMAT = "Nieprawidłowy format kwoty!";
+                ERROR_NO_BASE_CURRENCY = "Wymagana waluta bazowa!" +
+                        " Ustaw ten parametr najpierw na inną walutę, " +
+                        "a następnie zostanie on automatycznie usunięty w tej walucie.";
+
+                YES = "Tak";
+                NO = "Nie";
+
+                MENU_FILE = "Plik";
+                MENU_EDIT = "Edycja";
+                MENU_VIEW = "Widok";
+                MENU_HELP = "Pomoc";
         } else if (Settings.getLocale().equals("fr")) {
             PROGRAM_NAME = "Finances personnelles";
 
             ERROR_TITLE_EMPTY = "Vous n'avez pas saisi de nom !";
             ERROR_IS_EXISTS = "Cette entrée existe déjà !";
-            ERROR_DATE_FORMAT = "Format de date invalide !";
+            ERROR_DATE_FORMAT = "Nieprawidłowy format de date invalide !";
             ERROR_CODE_EMPTY = "Vous n'avez pas spécifié le code !";
             ERROR_CURRENCY_EMPTY = "Vous n'avez pas sélectionné de devise !";
             ERROR_ARTICLE_EMPTY = "Vous n'avez pas spécifié l'article !";
