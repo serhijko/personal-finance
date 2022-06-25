@@ -2,7 +2,7 @@ package personalfinance.settings;
 
 import java.util.HashMap;
 
-public class Text {
+public final class Text {
 
     public static final HashMap<String, String> data = new HashMap<>();
 

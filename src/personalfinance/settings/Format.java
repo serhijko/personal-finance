@@ -7,7 +7,7 @@ import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Format {
+public final class Format {
 
     public static String yesNo(boolean yes) {
         return Text.get(yes ? Text.YES : Text.NO);
