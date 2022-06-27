@@ -9,7 +9,7 @@ import javax.xml.bind.Unmarshaller;
 
 public class SaveLoad {
 
-    public void load(SaveData saveData) {
+    public static void load(SaveData saveData) {
         try {
             JAXBContext context = JAXBContext.newInstance(Wrapper.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
@@ -20,12 +20,13 @@ public class SaveLoad {
             saveData.setTransactions(wrapper.getTransactions());
             saveData.setTransfers(wrapper.getTransfers());
         } catch (JAXBException e) {
+            System.out.println("Файл ня йснуе!");
             throw new RuntimeException(e);
         }
 
     }
 
-    public void save(SaveData saveData) {
+    public static void save(SaveData saveData) {
         try {
             JAXBContext context = JAXBContext.newInstance(Wrapper.class);
             Marshaller marshaller = context.createMarshaller();

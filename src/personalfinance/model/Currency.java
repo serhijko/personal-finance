@@ -1,6 +1,7 @@
 package personalfinance.model;
 
 import personalfinance.exception.ModelException;
+import personalfinance.saveload.SaveData;
 
 import java.util.Objects;
 
@@ -96,5 +97,30 @@ public class Currency extends Common {
 
     public double getRateByCurrency(Currency currency) {
         return rate / currency.rate;
+    }
+
+    @Override
+    public void postAdd(SaveData saveData) {
+        clearBase(saveData);
+    }
+
+    @Override
+    public void postEdit(SaveData saveData) {
+        clearBase(saveData);
+        for (Account account : saveData.getAccounts())
+            if (account.getCurrency().equals(saveData.getOldCommon())) account.setCurrency(this);
+    }
+
+    private void clearBase(SaveData saveData) {
+        if (isBase) {
+            rate = 1;
+            Currency oldCurrency = (Currency) saveData.getOldCommon();
+            for (Currency currency : saveData.getCurrencies()) {
+                if (!this.equals(currency)) {
+                    currency.setBase(false);
+                    if (oldCurrency != null) currency.setRate(currency.getRate() / oldCurrency.getRate());
+                }
+            }
+        }
     }
 }
